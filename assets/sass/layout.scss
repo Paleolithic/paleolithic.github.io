@@ -1,0 +1,362 @@
+/**
+ * SASS/SCSS/Compass Transcription of Skeleton Responsive Grid
+ * originally authored by Dave Gamache. This translation offers
+ * mixins that support fluid and as well as fixed grids to supplement
+ * the work that Dave Gamache has done.
+ * @author Dennis Thompson <http://www.atomicpages.net>
+ * @copyright Copyright (c) 2013 AtomicPages LLC
+ * @license MIT
+ * @version 1.6.1
+ */
+
+// IMPORTS
+@import "vars"; // import _global_variables.scss
+@import "mixins"; // import _mixins.scss
+@import "compass/css3"; // import compass CSS3 mixins
+@import "compass/css3/user-interface";
+
+
+/* SITE STYLES
+ * ------------------------------------------------ */
+/* Add site styles here */
+/* For example: a { color: #000; } */
+
+/* TYPOGRAPHY (Baseline Corrections)
+================================================== */
+h1{ line-height: 49px; margin-bottom: 14px;}
+h2{ line-height: 42px; margin-bottom: 7px;}
+h3{ line-height: 35px; margin-bottom: 7px;}
+h4{ line-height: 28px; margin-bottom: 7px;}
+h5{ line-height: 21px;}
+
+p{ margin: 0 0 21px 0;}
+p.lead{ line-height: 28px;}
+
+
+/* BLOCKQUOTES (Baseline Corrections)
+================================================== */
+blockquote, blockquote p{line-height: 21px;}
+blockquote {margin: 0 0 21px; padding: 7px 28px 0 19px;}
+
+hr{ margin: 14px 0 28px;}
+
+/* LISTS (Baseline Corrections)
+================================================== */
+ul, ol {margin-bottom: 21px;}
+li { line-height: 21px; margin-bottom: 14px;}
+
+.row{
+    margin-bottom: 21px;
+}
+
+/* BUTTONS (Baseline Corrections)
+=================================================== */
+input[type="button"]{
+    background: none;
+    border: none;
+    text-shadow: none !important;
+}
+input[type="button"]:hover{
+    background: none;
+    border: none;
+    color: white;
+    text-shadow: none !important;
+}
+
+/* PAGE STYLES
+ * ------------------------------------------------ */
+/* Add page styles here */
+/* For example: .page-home { background: rgba(0, 0, 0, 0.4); } */
+html, body{
+    height: 100%;
+}
+
+h1,h4{
+    font-weight: 200;
+}
+
+header{
+    position: relative;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(232,77,91,.45), rgba(114,80,84,.45)), url(https://s3.amazonaws.com/ooomf-com-files/x6YzbWWRq2sRhAacMjnl_Bangkok%20Indra%20market.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    h2{
+        padding-left: 5px;
+    }
+    li{
+        display: inline;
+        list-style-type: none;
+        margin: 0 7px;
+        font-size: 14px;
+        text-align: center;
+    }
+    
+    a{
+        text-decoration: none;
+    }
+    a:hover, a.current{
+        border-bottom: 1px solid black;
+    }
+
+    
+    .container{
+        position: relative;
+        z-index: 999;
+        // width: 960px;
+        top: 25%;
+        text-align: center;
+
+        h1{
+        	color: white;
+        	text-transform: uppercase;
+        	font-size: 140px;
+        	line-height: 151px;
+        	font-weight: 800;
+            margin-bottom: 7px;
+           	font-family: 'Cabin', sans-serif;
+
+        }
+
+        h4{
+        	color: white;
+           	overflow: hidden;
+		    text-align: center;
+		
+			&:before,
+			&:after {
+			    background-color: #fff;
+			    content: "";
+			    display: inline-block;
+			    height: 1px;
+			    position: relative;
+			    vertical-align: middle;
+			    width: 20%;
+			}
+			&:before {
+			    right: 0.5em;
+			    margin-left: -50%;
+			}
+			&:after {
+			    left: 0.5em;
+			    margin-right: -50%;
+			}
+        }
+
+        a{
+        	@include border-radius(4px);
+        	cursor: pointer;
+            background: none;
+            border: 1px solid white;
+            color: white;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 14px;
+            display: inline-block;
+            margin-top: 7px;
+            padding: 7px 0;
+            width: 150px;
+            @include single-box-shadow; 
+        }
+        a:hover{
+            color: #523645;
+            background-color: white;
+        }
+    }
+
+    &:after{
+    	content:"";
+    	width: 0; 
+		height: 0; 
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-top: 20px solid rgba(0,0,0,.1);
+		position: absolute;
+		top: 100%;
+		left: 28px;
+    }
+}
+
+.about{
+	// height: 60%;
+	background-color: #CC2A41;
+	color: white;
+	text-align: center;
+    
+    .container{
+        top: 25%;
+        padding: 49px 0px;
+    }
+
+    .descriptor{
+		margin-top: 14px;
+		box-sizing: border-box;
+		padding: 0px 14px;
+        transition: all 0.4s;
+		.descriptor-image{
+			width: 100px;
+			height: 100px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		img{
+			width: 96px;
+			height: auto; 
+            // margin-top: 14px;
+		}
+		h3{
+            margin-top: 14px;
+			color: white;
+			font-family: 'Cabin', sans-serif;
+			text-transform: uppercase;
+
+            &:after{
+                content: "";
+                border: solid 2px #524549;
+                display: block;
+                width: 35px;
+                margin: 14px auto;
+            }
+		}
+		p{
+			font-family: "Times New Roman";
+		}
+
+        .bottom{
+            width: 100%;
+            height: 7px;
+            background-color: white;
+            opacity: 0;
+            // transform: translateY(100%);
+            // transition: transform 0.4s, opacity 0.3s;
+        }
+        &:hover{
+            @include translate(0px, -10px);
+            transition: all 0.4s;
+            .bottom{
+                opacity: 1;
+                @include translate(0px, -10px);
+                // transition: opacity 0.6s;
+                transition: all 0.4s;
+            }
+        }
+	}
+}
+
+#map{
+	height: 500px;
+
+    .iwindow{
+        @include border-radius(20px);
+        background-color:   white;
+
+        &>div>div:last-child{
+            @include border-radius(20px);
+        }
+        &>div{
+            @include border-radius(20px); 
+        }
+        .bottom{
+            background-color: #CC2A41;
+        }
+
+    }
+	h3{
+		color: #CC2A41;
+		font-family: 'Cabin', sans-serif;
+		text-transform: uppercase;
+	}
+	p{
+		color: #CC2A41;
+		font-family: "Times New Roman";
+	}
+}
+
+.hope{
+    background: #351330;
+    padding: 42px 0px;
+    text-align: center;
+    h1{
+        text-transform: uppercase;
+        color: white;
+        font-family: 'Cabin', sans-serif;
+    }
+    img{
+        @include rotate(90deg);
+    }
+}
+
+.contact{
+    background-color: #EEEEEE;
+    text-align: center;
+
+    .container{
+        top: 25%;
+        padding: 49px 0px;
+    }
+
+    .contact-info{
+        background-color: white;
+        
+        &:hover{
+            box-shadow: 0px 3px 0px 0px #3dc9b3;
+            @include translate(0px, -10px);
+            // transition: opacity 0.6s;
+            transition: all 0.4s;
+        }
+    }
+
+    h3{
+        margin-top: 14px;
+        color: #3dc9b3;
+        font-family: 'Cabin', sans-serif;
+        text-transform: uppercase;
+
+        &:after{
+            content: "";
+            border: solid 2px #CC2A41;
+            display: block;
+            width: 35px;
+            margin: 14px auto;
+        }
+    }
+
+}
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: $baseWidthMQ) and (max-width: 1280px) {
+	/* add code here */
+}
+
+/* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (max-width: $baseWidthMQ - 1) {
+	/* add code here */
+}
+
+/* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
+@media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
+	/* add code here */
+}
+
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: $tabletWidth - 1) {
+	/* add code here */
+}
+
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: $tabletWidth - 1) {
+	/* add code here */
+}
+
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+	/* add code here */
+}

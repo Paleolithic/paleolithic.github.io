@@ -1,0 +1,447 @@
+/**
+ * SASS/SCSS/Compass Transcription of Skeleton Responsive Grid
+ * originally authored by Dave Gamache. This translation offers
+ * mixins that support fluid and as well as fixed grids to supplement
+ * the work that Dave Gamache has done.
+ * @author Dennis Thompson <http://www.atomicpages.net>
+ * @copyright Copyright (c) 2013 AtomicPages LLC
+ * @license MIT
+ * @version 1.6.1
+ */
+/* SITE STYLES
+ * ------------------------------------------------ */
+/* Add site styles here */
+/* For example: a { color: #000; } */
+/* TYPOGRAPHY (Baseline Corrections)
+================================================== */
+/* line 26, ../sass/layout.scss */
+h1 {
+  line-height: 49px;
+  margin-bottom: 14px;
+}
+
+/* line 27, ../sass/layout.scss */
+h2 {
+  line-height: 42px;
+  margin-bottom: 7px;
+}
+
+/* line 28, ../sass/layout.scss */
+h3 {
+  line-height: 35px;
+  margin-bottom: 7px;
+}
+
+/* line 29, ../sass/layout.scss */
+h4 {
+  line-height: 28px;
+  margin-bottom: 7px;
+}
+
+/* line 30, ../sass/layout.scss */
+h5 {
+  line-height: 21px;
+}
+
+/* line 32, ../sass/layout.scss */
+p {
+  margin: 0 0 21px 0;
+}
+
+/* line 33, ../sass/layout.scss */
+p.lead {
+  line-height: 28px;
+}
+
+/* BLOCKQUOTES (Baseline Corrections)
+================================================== */
+/* line 38, ../sass/layout.scss */
+blockquote, blockquote p {
+  line-height: 21px;
+}
+
+/* line 39, ../sass/layout.scss */
+blockquote {
+  margin: 0 0 21px;
+  padding: 7px 28px 0 19px;
+}
+
+/* line 41, ../sass/layout.scss */
+hr {
+  margin: 14px 0 28px;
+}
+
+/* LISTS (Baseline Corrections)
+================================================== */
+/* line 45, ../sass/layout.scss */
+ul, ol {
+  margin-bottom: 21px;
+}
+
+/* line 46, ../sass/layout.scss */
+li {
+  line-height: 21px;
+  margin-bottom: 14px;
+}
+
+/* line 48, ../sass/layout.scss */
+.row {
+  margin-bottom: 21px;
+}
+
+/* BUTTONS (Baseline Corrections)
+=================================================== */
+/* line 54, ../sass/layout.scss */
+input[type="button"] {
+  background: none;
+  border: none;
+  text-shadow: none !important;
+}
+
+/* line 59, ../sass/layout.scss */
+input[type="button"]:hover {
+  background: none;
+  border: none;
+  color: white;
+  text-shadow: none !important;
+}
+
+/* PAGE STYLES
+ * ------------------------------------------------ */
+/* Add page styles here */
+/* For example: .page-home { background: rgba(0, 0, 0, 0.4); } */
+/* line 70, ../sass/layout.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 74, ../sass/layout.scss */
+h1, h4 {
+  font-weight: 200;
+}
+
+/* line 78, ../sass/layout.scss */
+header {
+  position: relative;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0deg, rgba(232, 77, 91, 0.45), rgba(114, 80, 84, 0.45)), url(https://s3.amazonaws.com/ooomf-com-files/x6YzbWWRq2sRhAacMjnl_Bangkok%20Indra%20market.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 91, ../sass/layout.scss */
+header h2 {
+  padding-left: 5px;
+}
+/* line 94, ../sass/layout.scss */
+header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0 7px;
+  font-size: 14px;
+  text-align: center;
+}
+/* line 102, ../sass/layout.scss */
+header a {
+  text-decoration: none;
+}
+/* line 105, ../sass/layout.scss */
+header a:hover, header a.current {
+  border-bottom: 1px solid black;
+}
+/* line 110, ../sass/layout.scss */
+header .container {
+  position: relative;
+  z-index: 999;
+  top: 25%;
+  text-align: center;
+}
+/* line 117, ../sass/layout.scss */
+header .container h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 140px;
+  line-height: 151px;
+  font-weight: 800;
+  margin-bottom: 7px;
+  font-family: 'Cabin', sans-serif;
+}
+/* line 128, ../sass/layout.scss */
+header .container h4 {
+  color: white;
+  overflow: hidden;
+  text-align: center;
+}
+/* line 134, ../sass/layout.scss */
+header .container h4:before, header .container h4:after {
+  background-color: #fff;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 20%;
+}
+/* line 143, ../sass/layout.scss */
+header .container h4:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+/* line 147, ../sass/layout.scss */
+header .container h4:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+/* line 153, ../sass/layout.scss */
+header .container a {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  background: none;
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 14px;
+  display: inline-block;
+  margin-top: 7px;
+  padding: 7px 0;
+  width: 150px;
+  -webkit-box-shadow: 0px 0px 5px #333333;
+  -moz-box-shadow: 0px 0px 5px #333333;
+  box-shadow: 0px 0px 5px #333333;
+}
+/* line 168, ../sass/layout.scss */
+header .container a:hover {
+  color: #523645;
+  background-color: white;
+}
+/* line 174, ../sass/layout.scss */
+header:after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 100%;
+  left: 28px;
+}
+
+/* line 187, ../sass/layout.scss */
+.about {
+  background-color: #CC2A41;
+  color: white;
+  text-align: center;
+}
+/* line 193, ../sass/layout.scss */
+.about .container {
+  top: 25%;
+  padding: 49px 0px;
+}
+/* line 198, ../sass/layout.scss */
+.about .descriptor {
+  margin-top: 14px;
+  box-sizing: border-box;
+  padding: 0px 14px;
+  transition: all 0.4s;
+}
+/* line 203, ../sass/layout.scss */
+.about .descriptor .descriptor-image {
+  width: 100px;
+  height: 100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 209, ../sass/layout.scss */
+.about .descriptor img {
+  width: 96px;
+  height: auto;
+}
+/* line 214, ../sass/layout.scss */
+.about .descriptor h3 {
+  margin-top: 14px;
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  text-transform: uppercase;
+}
+/* line 220, ../sass/layout.scss */
+.about .descriptor h3:after {
+  content: "";
+  border: solid 2px #524549;
+  display: block;
+  width: 35px;
+  margin: 14px auto;
+}
+/* line 228, ../sass/layout.scss */
+.about .descriptor p {
+  font-family: "Times New Roman";
+}
+/* line 232, ../sass/layout.scss */
+.about .descriptor .bottom {
+  width: 100%;
+  height: 7px;
+  background-color: white;
+  opacity: 0;
+}
+/* line 240, ../sass/layout.scss */
+.about .descriptor:hover {
+  -webkit-transform: translate(0px, -10px);
+  -moz-transform: translate(0px, -10px);
+  -ms-transform: translate(0px, -10px);
+  -o-transform: translate(0px, -10px);
+  transform: translate(0px, -10px);
+  transition: all 0.4s;
+}
+/* line 243, ../sass/layout.scss */
+.about .descriptor:hover .bottom {
+  opacity: 1;
+  -webkit-transform: translate(0px, -10px);
+  -moz-transform: translate(0px, -10px);
+  -ms-transform: translate(0px, -10px);
+  -o-transform: translate(0px, -10px);
+  transform: translate(0px, -10px);
+  transition: all 0.4s;
+}
+
+/* line 253, ../sass/layout.scss */
+#map {
+  height: 500px;
+}
+/* line 256, ../sass/layout.scss */
+#map .iwindow {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  background-color: white;
+}
+/* line 260, ../sass/layout.scss */
+#map .iwindow > div > div:last-child {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+}
+/* line 263, ../sass/layout.scss */
+#map .iwindow > div {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+}
+/* line 266, ../sass/layout.scss */
+#map .iwindow .bottom {
+  background-color: #CC2A41;
+}
+/* line 271, ../sass/layout.scss */
+#map h3 {
+  color: #CC2A41;
+  font-family: 'Cabin', sans-serif;
+  text-transform: uppercase;
+}
+/* line 276, ../sass/layout.scss */
+#map p {
+  color: #CC2A41;
+  font-family: "Times New Roman";
+}
+
+/* line 282, ../sass/layout.scss */
+.hope {
+  background: #351330;
+  padding: 42px 0px;
+  text-align: center;
+}
+/* line 286, ../sass/layout.scss */
+.hope h1 {
+  text-transform: uppercase;
+  color: white;
+  font-family: 'Cabin', sans-serif;
+}
+/* line 291, ../sass/layout.scss */
+.hope img {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* line 296, ../sass/layout.scss */
+.contact {
+  background-color: #EEEEEE;
+  text-align: center;
+}
+/* line 300, ../sass/layout.scss */
+.contact .container {
+  top: 25%;
+  padding: 49px 0px;
+}
+/* line 305, ../sass/layout.scss */
+.contact .contact-info {
+  background-color: white;
+}
+/* line 308, ../sass/layout.scss */
+.contact .contact-info:hover {
+  box-shadow: 0px 3px 0px 0px #3dc9b3;
+  -webkit-transform: translate(0px, -10px);
+  -moz-transform: translate(0px, -10px);
+  -ms-transform: translate(0px, -10px);
+  -o-transform: translate(0px, -10px);
+  transform: translate(0px, -10px);
+  transition: all 0.4s;
+}
+/* line 316, ../sass/layout.scss */
+.contact h3 {
+  margin-top: 14px;
+  color: #3dc9b3;
+  font-family: 'Cabin', sans-serif;
+  text-transform: uppercase;
+}
+/* line 322, ../sass/layout.scss */
+.contact h3:after {
+  content: "";
+  border: solid 2px #CC2A41;
+  display: block;
+  width: 35px;
+  margin: 14px auto;
+}
+
+/* MEDIA QUERIES
+ * ------------------------------------------------ */
+/* Otherwise known as custom responsive code! Write it here! */
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+  /* add code here */
+}
+/* Smaller than standard 960 (devices and browsers) */
+@media only screen and (max-width: 959px) {
+  /* add code here */
+}
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+  /* add code here */
+}
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) {
+  /* add code here */
+}
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  /* add code here */
+}
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) {
+  /* add code here */
+}

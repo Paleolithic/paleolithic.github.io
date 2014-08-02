@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>NYC Flashmob</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./assets/stylesheets/base.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/stylesheets/skeleton.css"/>
+    <link rel="stylesheet" type="text/css" href="./assets/stylesheets/layout.css"/>
+    <!--[if IE]>
+      <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Cabin:700|Raleway:400,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,800' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<header>
+    <div class='container'>
+    	<div class=''>
+	        <h4>You've been invited to</h4>
+	        <h1 class='sixteen columns'>Flash Mob</h1>
+	        <!-- <a>Join the mob v</a> -->
+	    </div>
+    </div>
+</header>
+<section class="about" id="about">
+	<div class="container">
+		<div class="eight columns descriptor">
+			<div class='descriptor-image'><img src='assets/images/file.png'/></div>
+			<h3>What</h3>
+			<p>In case you've never heard of this before...this is a flashmob - we'll be assembling suddenly in a public place like one does in a flashmob for some entertainment! Prepare to be entertained!
+			</p>
+			<div class="bottom"></div>
+		</div>
+		<div class="eight columns descriptor">
+			<div class='descriptor-image'><img src='assets/images/pointer.png'/></div>
+			<h3>Who</h3>
+			<p>You! If you're reading this, we need you! We're trying to get as many people together as possible to make this flashmob a success, so if you're available - come on out! We'll be waiting.
+			</p>
+			<div class="bottom"></div>
+		</div>
+		<div class="eight columns descriptor">
+			<div class='descriptor-image'><img src='assets/images/lightbulb.png'/></div>
+			<h3>Why</h3>
+			<p>The real question is, why not? Does one really need a reason to come out and have fun? Sometimes it's easy to get into a boring routine - spice it up!
+			</p>
+			<div class="bottom"></div>
+		</div>
+		<div class="eight columns descriptor">
+			<div class='descriptor-image'><img src='assets/images/calendar.png'/></div>
+			<h3>When</h3>
+			<p>October 4th, 2014 @ 2pm.
+			</p>
+			<div class="bottom"></div>
+		</div>
+	</div>
+</section>
+<section class="about" id="where">
+	<div id='map'></div>	
+</section>
+<section class="hope">
+	<div class="container">
+		<h1 class="sixteen columns">Any questions?</h1>
+		<a href="#"><img src='assets/images/chevron.png'/></a>
+	</div>
+</section>
+<section class="contact">
+	<div class="container">
+		<div class="one-third column contact-info">
+			<h3>Address</h3>
+			<p>Eleven Madison Ave.
+				15th Floor
+				New York, NY</p>
+		</div>
+		<div class="one-third column contact-info">
+			<h3>Phone</h3>
+			<p>212.538.1884</p>
+		</div>
+		<div class="one-third column contact-info">
+			<h3>Email</h3>
+			<p>ihqmdwod@grr.la</p>
+		</div>		
+	</div>
+</section>
+<footer>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSNWPbzxo6_7n7uHyLs2f8Nx8ZYcmsP4M&sensor=false"></script>
+	<script type="text/javascript">            
+		// When the window has finished loading create our google map below
+	    google.maps.event.addDomListener(window, 'load', init);
+
+	    function init() {
+	        // Basic options for a simple Google Map
+	        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+	        var mapOptions = {
+	            // How zoomed in you want the map to start at (always required)
+	            zoom: 13,
+	            scrollwheel: false,
+	            streetViewControl: false,
+	            panControl: false,
+	            mapTypeControl: false,
+	            center: new google.maps.LatLng(40.765, -73.9880),
+	            mapTypeId: google.maps.MapTypeId.ROADMAP,
+	            zoomControlOptions: {
+	                style: google.maps.ZoomControlStyle.SMALL
+	            },
+	            
+	        };
+
+
+	        // Get the HTML DOM element that will contain your map 
+	        // We are using a div with id="map" seen below in the <body>
+	        var mapElement = document.getElementById('map');
+
+	        // Create the Google Map using out element and options defined above
+	        var map = new google.maps.Map(mapElement, mapOptions);
+	        var getCen = map.getCenter();
+			google.maps.event.addDomListener(window, 'resize', function() {
+				map.setCenter(getCen);
+			});
+
+			var contentString = 
+				'<div id="iwindow-descriptor" class="descriptor">'+
+					'<img src="assets/images/location_colored.png">'+
+					'<h3 id="firstHeading" class="firstHeading">Where</h3>'+
+					'<div id="bodyContent">'+
+						'<p>Madison Square Park in New York City, Between Fifth & Madison Avenues, 23rd & 26th Streets</p>'+
+					'</div>'+
+					'<div class="bottom"></div>'+
+				'</div>';
+
+			var infowindow = new google.maps.InfoWindow({
+			  content: contentString,
+			  maxWidth: 460
+			});
+
+	        var marker = new google.maps.Marker({
+	            position: new google.maps.LatLng(40.7421, -73.9880),
+	            map: map,
+	            animation: google.maps.Animation.DROP,
+	            title: 'Field House'
+	        });
+
+	        infowindow.open(map,marker);
+
+
+		    google.maps.event.addListener(infowindow, 'domready', function() {
+		    	$l = $('#iwindow-descriptor').parent().parent().parent();
+		        $l.addClass('iwindow');
+		     });
+	        // var mapWidth = document.getElementById('map').style.width;
+	        // document.getElementById('map').style.height = mapWidth * .5;
+
+	        // $("#map").height($("#height").height()-20);
+	    }
+
+	</script>
+</footer>
+</body>
+</html>

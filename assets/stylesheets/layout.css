@@ -406,15 +406,22 @@ header:after {
   -o-border-radius: 4px;
   border-radius: 4px;
   background-color: #CC2A41;
+  margin-top: 7px;
+  margin-bottom: 7px;
 }
-/* line 323, ../sass/layout.scss */
+/* line 326, ../sass/layout.scss */
+.participants iframe {
+  display: block;
+  margin: 4px auto;
+}
+/* line 330, ../sass/layout.scss */
 .participants h3 {
   margin-top: 14px;
   color: white;
   font-family: 'Cabin', sans-serif;
   text-transform: uppercase;
 }
-/* line 329, ../sass/layout.scss */
+/* line 336, ../sass/layout.scss */
 .participants h3:after {
   content: "";
   border: solid 2px #3dc9b3;
@@ -422,26 +429,26 @@ header:after {
   width: 35px;
   margin: 14px auto;
 }
-/* line 337, ../sass/layout.scss */
+/* line 344, ../sass/layout.scss */
 .participants p {
   color: white;
   width: 95%;
   margin: 0 auto 7px auto;
 }
 
-/* line 343, ../sass/layout.scss */
+/* line 350, ../sass/layout.scss */
 .hope {
   background: #351330;
   padding: 42px 0px;
   text-align: center;
 }
-/* line 347, ../sass/layout.scss */
+/* line 354, ../sass/layout.scss */
 .hope h1 {
   text-transform: uppercase;
   color: white;
   font-family: 'Cabin', sans-serif;
 }
-/* line 352, ../sass/layout.scss */
+/* line 359, ../sass/layout.scss */
 .hope img {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -450,21 +457,21 @@ header:after {
   transform: rotate(90deg);
 }
 
-/* line 357, ../sass/layout.scss */
+/* line 364, ../sass/layout.scss */
 .contact {
   background-color: #EEEEEE;
   text-align: center;
 }
-/* line 361, ../sass/layout.scss */
+/* line 368, ../sass/layout.scss */
 .contact .container {
   top: 25%;
   padding: 49px 0px;
 }
-/* line 366, ../sass/layout.scss */
+/* line 373, ../sass/layout.scss */
 .contact .contact-info {
   background-color: white;
 }
-/* line 369, ../sass/layout.scss */
+/* line 376, ../sass/layout.scss */
 .contact .contact-info:hover {
   box-shadow: 0px 3px 0px 0px #3dc9b3;
   -webkit-transform: translate(0px, -10px);
@@ -474,14 +481,14 @@ header:after {
   transform: translate(0px, -10px);
   transition: all 0.4s;
 }
-/* line 377, ../sass/layout.scss */
+/* line 384, ../sass/layout.scss */
 .contact h3 {
   margin-top: 14px;
   color: #3dc9b3;
   font-family: 'Cabin', sans-serif;
   text-transform: uppercase;
 }
-/* line 383, ../sass/layout.scss */
+/* line 390, ../sass/layout.scss */
 .contact h3:after {
   content: "";
   border: solid 2px #CC2A41;
@@ -499,15 +506,25 @@ header:after {
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
   /* add code here */
+  /* line 411, ../sass/layout.scss */
+  .participants iframe {
+    width: 399px;
+    height: 299px;
+  }
 }
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
   /* add code here */
+  /* line 422, ../sass/layout.scss */
+  .participants iframe {
+    width: 224px;
+    height: 168px;
+  }
 }
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
   /* add code here */
-  /* line 414, ../sass/layout.scss */
+  /* line 433, ../sass/layout.scss */
   header .container {
     top: 12%;
   }
@@ -519,16 +536,16 @@ header:after {
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
   /* add code here */
-  /* line 429, ../sass/layout.scss */
+  /* line 448, ../sass/layout.scss */
   header .container {
     top: 20%;
   }
-  /* line 432, ../sass/layout.scss */
+  /* line 451, ../sass/layout.scss */
   header .container h1 {
     font-size: 70px;
     line-height: 81px;
   }
-  /* line 437, ../sass/layout.scss */
+  /* line 456, ../sass/layout.scss */
   header .container iframe {
     width: 300px;
     height: 225px;

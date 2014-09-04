@@ -319,6 +319,13 @@ header{
     .participant{
         @include border-radius(4px);
         background-color: #CC2A41;
+        margin-top: 7px;
+        margin-bottom: 7px;
+    }
+
+    iframe{
+        display: block;
+        margin: 4px auto;
     }
     h3{
         margin-top: 14px;
@@ -400,11 +407,23 @@ header{
 /* Smaller than standard #{strip-units($baseWidthMQ)} (devices and browsers) */
 @media only screen and (max-width: $baseWidthMQ - 1) {
 	/* add code here */
+    .participants{
+        iframe{
+            width: 399px;
+            height: 299px; 
+        }
+    }
 }
 
 /* Tablet Portrait size to standard #{strip-units($baseWidthMQ)} (devices and browsers) */
 @media only screen and (min-width: $tabletWidth) and (max-width: $baseWidthMQ - 1) {
 	/* add code here */
+    .participants{
+        iframe{
+            width: 224px;
+            height: 168px; 
+        }
+    }
 }
 
 /* All Mobile Sizes (devices and browser) */

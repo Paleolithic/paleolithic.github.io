@@ -46,6 +46,7 @@ h5 {
 /* line 32, ../sass/layout.scss */
 p {
   margin: 0 0 21px 0;
+  font-size: 16px;
 }
 
 /* line 33, ../sass/layout.scss */
@@ -157,7 +158,7 @@ header {
   padding: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0deg, rgba(232, 77, 91, 0.45), rgba(114, 80, 84, 0.45)), url(https://s3.amazonaws.com/ooomf-com-files/x6YzbWWRq2sRhAacMjnl_Bangkok%20Indra%20market.jpg) no-repeat center center fixed;
+  background: linear-gradient(0deg, rgba(232, 77, 91, 0.45), rgba(114, 80, 84, 0.45)), url("../images/bg.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -187,7 +188,7 @@ header a:hover, header a.current {
 header .container {
   position: relative;
   z-index: 999;
-  top: 25%;
+  top: 22%;
   text-align: center;
 }
 /* line 143, ../sass/layout.scss */
@@ -197,7 +198,7 @@ header .container h1 {
   font-size: 140px;
   line-height: 151px;
   font-weight: 800;
-  margin-bottom: 7px;
+  margin-bottom: 21px;
   font-family: 'Cabin', sans-serif;
 }
 /* line 154, ../sass/layout.scss */
@@ -253,7 +254,11 @@ header .container a:hover {
   color: #523645;
   background-color: white;
 }
-/* line 200, ../sass/layout.scss */
+/* line 199, ../sass/layout.scss */
+header .container .smaller {
+  display: none;
+}
+/* line 204, ../sass/layout.scss */
 header:after {
   content: "";
   width: 0;
@@ -266,44 +271,44 @@ header:after {
   left: 28px;
 }
 
-/* line 213, ../sass/layout.scss */
+/* line 217, ../sass/layout.scss */
 .about {
   background-color: #CC2A41;
   color: white;
   text-align: center;
 }
-/* line 219, ../sass/layout.scss */
+/* line 223, ../sass/layout.scss */
 .about .container {
   top: 25%;
   padding: 49px 0px;
 }
-/* line 224, ../sass/layout.scss */
+/* line 228, ../sass/layout.scss */
 .about .descriptor {
   margin-top: 14px;
   box-sizing: border-box;
   padding: 0px 14px;
   transition: all 0.4s;
 }
-/* line 229, ../sass/layout.scss */
+/* line 233, ../sass/layout.scss */
 .about .descriptor .descriptor-image {
   width: 100px;
   height: 100px;
   margin-left: auto;
   margin-right: auto;
 }
-/* line 235, ../sass/layout.scss */
+/* line 239, ../sass/layout.scss */
 .about .descriptor img {
   width: 96px;
   height: auto;
 }
-/* line 240, ../sass/layout.scss */
+/* line 244, ../sass/layout.scss */
 .about .descriptor h3 {
   margin-top: 14px;
   color: white;
   font-family: 'Cabin', sans-serif;
   text-transform: uppercase;
 }
-/* line 246, ../sass/layout.scss */
+/* line 250, ../sass/layout.scss */
 .about .descriptor h3:after {
   content: "";
   border: solid 2px #524549;
@@ -311,18 +316,18 @@ header:after {
   width: 35px;
   margin: 14px auto;
 }
-/* line 254, ../sass/layout.scss */
+/* line 258, ../sass/layout.scss */
 .about .descriptor p {
   font-family: "Times New Roman";
 }
-/* line 260, ../sass/layout.scss */
+/* line 264, ../sass/layout.scss */
 .about .descriptor .bottom {
   width: 100%;
   height: 7px;
   background-color: white;
   opacity: 0;
 }
-/* line 268, ../sass/layout.scss */
+/* line 272, ../sass/layout.scss */
 .about .descriptor:hover {
   -webkit-transform: translate(0px, -10px);
   -moz-transform: translate(0px, -10px);
@@ -331,7 +336,7 @@ header:after {
   transform: translate(0px, -10px);
   transition: all 0.4s;
 }
-/* line 271, ../sass/layout.scss */
+/* line 275, ../sass/layout.scss */
 .about .descriptor:hover .bottom {
   opacity: 1;
   -webkit-transform: translate(0px, -10px);
@@ -342,11 +347,11 @@ header:after {
   transition: all 0.4s;
 }
 
-/* line 281, ../sass/layout.scss */
+/* line 285, ../sass/layout.scss */
 #map {
-  height: 500px;
+  height: 550px;
 }
-/* line 284, ../sass/layout.scss */
+/* line 288, ../sass/layout.scss */
 #map .iwindow {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -355,7 +360,7 @@ header:after {
   border-radius: 20px;
   background-color: white;
 }
-/* line 288, ../sass/layout.scss */
+/* line 292, ../sass/layout.scss */
 #map .iwindow > div > div:last-child {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -363,7 +368,7 @@ header:after {
   -o-border-radius: 20px;
   border-radius: 20px;
 }
-/* line 291, ../sass/layout.scss */
+/* line 295, ../sass/layout.scss */
 #map .iwindow > div {
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -371,35 +376,72 @@ header:after {
   -o-border-radius: 20px;
   border-radius: 20px;
 }
-/* line 294, ../sass/layout.scss */
+/* line 298, ../sass/layout.scss */
 #map .iwindow .bottom {
   background-color: #CC2A41;
 }
-/* line 299, ../sass/layout.scss */
+/* line 303, ../sass/layout.scss */
 #map h3 {
   color: #CC2A41;
   font-family: 'Cabin', sans-serif;
   text-transform: uppercase;
 }
-/* line 304, ../sass/layout.scss */
+/* line 308, ../sass/layout.scss */
 #map p {
   color: #CC2A41;
   font-family: "Times New Roman";
 }
 
-/* line 310, ../sass/layout.scss */
+/* line 314, ../sass/layout.scss */
+.participants {
+  background-color: #EEEEEE;
+  padding: 42px 0px;
+  text-align: center;
+}
+/* line 319, ../sass/layout.scss */
+.participants .participant {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  background-color: #CC2A41;
+}
+/* line 323, ../sass/layout.scss */
+.participants h3 {
+  margin-top: 14px;
+  color: white;
+  font-family: 'Cabin', sans-serif;
+  text-transform: uppercase;
+}
+/* line 329, ../sass/layout.scss */
+.participants h3:after {
+  content: "";
+  border: solid 2px #3dc9b3;
+  display: block;
+  width: 35px;
+  margin: 14px auto;
+}
+/* line 337, ../sass/layout.scss */
+.participants p {
+  color: white;
+  width: 95%;
+  margin: 0 auto 7px auto;
+}
+
+/* line 343, ../sass/layout.scss */
 .hope {
   background: #351330;
   padding: 42px 0px;
   text-align: center;
 }
-/* line 314, ../sass/layout.scss */
+/* line 347, ../sass/layout.scss */
 .hope h1 {
   text-transform: uppercase;
   color: white;
   font-family: 'Cabin', sans-serif;
 }
-/* line 319, ../sass/layout.scss */
+/* line 352, ../sass/layout.scss */
 .hope img {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
@@ -408,21 +450,21 @@ header:after {
   transform: rotate(90deg);
 }
 
-/* line 324, ../sass/layout.scss */
+/* line 357, ../sass/layout.scss */
 .contact {
   background-color: #EEEEEE;
   text-align: center;
 }
-/* line 328, ../sass/layout.scss */
+/* line 361, ../sass/layout.scss */
 .contact .container {
   top: 25%;
   padding: 49px 0px;
 }
-/* line 333, ../sass/layout.scss */
+/* line 366, ../sass/layout.scss */
 .contact .contact-info {
   background-color: white;
 }
-/* line 336, ../sass/layout.scss */
+/* line 369, ../sass/layout.scss */
 .contact .contact-info:hover {
   box-shadow: 0px 3px 0px 0px #3dc9b3;
   -webkit-transform: translate(0px, -10px);
@@ -432,14 +474,14 @@ header:after {
   transform: translate(0px, -10px);
   transition: all 0.4s;
 }
-/* line 344, ../sass/layout.scss */
+/* line 377, ../sass/layout.scss */
 .contact h3 {
   margin-top: 14px;
   color: #3dc9b3;
   font-family: 'Cabin', sans-serif;
   text-transform: uppercase;
 }
-/* line 350, ../sass/layout.scss */
+/* line 383, ../sass/layout.scss */
 .contact h3:after {
   content: "";
   border: solid 2px #CC2A41;
@@ -465,6 +507,10 @@ header:after {
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
   /* add code here */
+  /* line 414, ../sass/layout.scss */
+  header .container {
+    top: 12%;
+  }
 }
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -473,4 +519,18 @@ header:after {
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
   /* add code here */
+  /* line 429, ../sass/layout.scss */
+  header .container {
+    top: 20%;
+  }
+  /* line 432, ../sass/layout.scss */
+  header .container h1 {
+    font-size: 70px;
+    line-height: 81px;
+  }
+  /* line 437, ../sass/layout.scss */
+  header .container iframe {
+    width: 300px;
+    height: 225px;
+  }
 }

@@ -29,7 +29,7 @@ h3{ line-height: 35px; margin-bottom: 7px;}
 h4{ line-height: 28px; margin-bottom: 7px;}
 h5{ line-height: 21px;}
 
-p{ margin: 0 0 21px 0;}
+p{ margin: 0 0 21px 0; font-size: 16px;}
 p.lead{ line-height: 28px;}
 
 
@@ -108,7 +108,7 @@ header{
     padding: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(0deg, rgba(232,77,91,.45), rgba(114,80,84,.45)), url(https://s3.amazonaws.com/ooomf-com-files/x6YzbWWRq2sRhAacMjnl_Bangkok%20Indra%20market.jpg) no-repeat center center fixed; 
+    background: linear-gradient(0deg, rgba(232,77,91,.45), rgba(114,80,84,.45)), url('../images/bg.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -137,7 +137,7 @@ header{
         position: relative;
         z-index: 999;
         // width: 960px;
-        top: 25%;
+        top: 22%;
         text-align: center;
 
         h1{
@@ -146,7 +146,7 @@ header{
         	font-size: 140px;
         	line-height: 151px;
         	font-weight: 800;
-            margin-bottom: 7px;
+            margin-bottom: 21px;
            	font-family: 'Cabin', sans-serif;
 
         }
@@ -194,6 +194,10 @@ header{
         a:hover{
             color: #523645;
             background-color: white;
+        }
+
+        .smaller{
+            display: none;
         }
     }
 
@@ -279,7 +283,7 @@ header{
 }
 
 #map{
-	height: 500px;
+	height: 550px;
 
     .iwindow{
         @include border-radius(20px);
@@ -307,6 +311,35 @@ header{
 	}
 }
 
+.participants{
+    background-color: #EEEEEE;
+    padding: 42px 0px;
+    text-align: center;
+
+    .participant{
+        @include border-radius(4px);
+        background-color: #CC2A41;
+    }
+    h3{
+        margin-top: 14px;
+        color: white;
+        font-family: 'Cabin', sans-serif;
+        text-transform: uppercase;
+        
+        &:after{
+            content: "";
+            border: solid 2px #3dc9b3;
+            display: block;
+            width: 35px;
+            margin: 14px auto;
+        }
+    }
+    p{
+        color: white;
+        width: 95%;
+        margin: 0 auto 7px auto;
+    }
+}
 .hope{
     background: #351330;
     padding: 42px 0px;
@@ -377,6 +410,11 @@ header{
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: $tabletWidth - 1) {
 	/* add code here */
+    header{
+        .container{
+            top: 12%;
+        }
+    }
 }
 
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
@@ -387,4 +425,20 @@ header{
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
 	/* add code here */
+    header{
+        .container{
+            top: 20%;
+
+            h1{
+                font-size: 70px;
+                line-height: 81px;
+            }
+
+            iframe{
+                width: 300px;
+                height: 225px;
+            }
+
+        }
+    }
 }
